@@ -1,16 +1,66 @@
-# React + Vite
+# Vite Test App - Benutzerliste
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eine React-App zum Anzeigen und Durchsuchen von Benutzerdaten.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📋 Benutzerliste von JSONPlaceholder API
+- 🔍 Echtzeit-Suche nach Namen
+- 🌗 Dark/Light Mode Support
+- ⚡ Gebaut mit Vite + React 19
 
-## React Compiler
+## Installation & Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Option 1: Standalone (Empfohlen)
 
-## Expanding the ESLint configuration
+**Voraussetzung:** Nur Node.js (keine npm install nötig!)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Release von GitHub herunterladen und entpacken
+unzip vite-test1-v1.0.0.zip
+cd vite-test1
+
+# Server starten (nutzt nur Node.js Built-ins)
+node server.cjs
+```
+
+Öffne im Browser: **http://localhost:3000**
+
+### Option 2: Development
+
+```bash
+# Dependencies installieren
+npm install
+
+# Development Server
+npm run dev
+
+# Production Build
+npm run build
+
+# Production Preview
+npm run preview
+```
+
+## Deployment
+
+### Webserver (Apache/Nginx)
+
+Kopiere den Inhalt des `dist/` Ordners auf deinen Webserver.
+
+### Mit Node.js Server
+
+```bash
+# Umgebungsvariable für Port (optional)
+PORT=8080 node server.cjs
+```
+
+## Technologie-Stack
+
+- **React 19.2** - UI Framework
+- **Vite 7.2** - Build Tool
+- **Node.js** - Runtime für Server
+
+## Lizenz
+
+MIT

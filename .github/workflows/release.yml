@@ -30,7 +30,12 @@ jobs:
 
       - name: Create zip archive
         run: |
-          cd dist
+          mkdir release-package
+          cp -r dist release-package/
+          cp server.cjs release-package/
+          cp package.json release-package/
+          cp README.md release-package/
+          cd release-package
           zip -r ../vite-test1-${{ github.ref_name }}.zip .
           cd ..
 
